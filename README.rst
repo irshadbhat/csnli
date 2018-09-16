@@ -8,17 +8,21 @@ Neural language identification and normalisation in code switching data tailored
 Requirements
 ^^^^^^^^^^^^
 
-pip install -r requirements.txt
-python build_viterbi.py build_ext --inplace
+::
 
+    pip install -r requirements.txt
+    python build_viterbi.py build_ext --inplace
+    
 Download models from `csnli-models`_.
 
 .. _`csnli-models`: https://bitbucket.org/irshadbhat/csnli-models/src
 
-bunzip2 lm/*
-bunzip2 dicts/*
-bunzip2 lid_models/*
-bunzip2 nmt_models/*
+::
+
+    bunzip2 lm/*
+    bunzip2 dicts/*
+    bunzip2 lid_models/*
+    bunzip2 nmt_models/*
 
 
 Three Step Decoding
