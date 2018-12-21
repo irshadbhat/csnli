@@ -94,9 +94,9 @@ if __name__ == '__main__':
 
     tsd = ThreeStepDecoding(args.lid_model, args.htrans, args.etrans, wx=args.wx)
     tsd.lid.en_trans.transliterate('\n'.join(set(io.open(args.tfile).read().split())))
-    tsd.lid.etrans = tsd.en_trans.trans_dict
-    tsd.lis.hi_trans.transliterate('\n'.join(set(io.open(args.tfile).read().split())))
-    tsd.lid.htrans = tsd.hi_trans.trans_dict
+    tsd.lid.etrans = tsd.lid.en_trans.trans_dict
+    tsd.lid.hi_trans.transliterate('\n'.join(set(io.open(args.tfile).read().split())))
+    tsd.lid.htrans = tsd.lid.hi_trans.trans_dict
     with io.open(args.tfile) as ifp, io.open(args.ofile, 'w') as ofp:
         for i,sent in enumerate(ifp):
             dec_sent = tsd.tag_sent(sent, trans=False)
