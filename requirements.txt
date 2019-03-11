@@ -2,7 +2,7 @@ six
 tqdm
 future
 torch==0.3.1
-torchtext=0.2.1
+torchtext==0.2.1
 dynet==2.0
 gensim==0.13.4.1
 numpy==1.14.3
